@@ -1,5 +1,6 @@
 /* 总体样式 */
-body{
+body {
+	/* background-color: #222222; */
 	margin: 4px 0px 0px 0px;
 	padding: 0px;
 }
@@ -23,34 +24,58 @@ div {
 	height: 160px;
 }
 
-#player input,#player button,#player div {
+#player input, #player button, #player div {
 	float: left;
 }
 
 /* controller样式 */
-#controller{
+#controller {
 	width: 100%;
 }
 
-#progress 
-{
- background:white;
- height:20px;
- width: 50%;
- height: 4px;
- border:1px solid green;
- margin:9px 0px 0px 0px;
+#progress {
+	background: white;
+	height: 20px;
+	width: 40%;
+	height: 4px;
+	border: 1px solid green;
+	margin: 9px 0px 0px 0px;
+	cursor: pointer;
 }
 
-#progress span 
-{
- background:green;
- height:4px;
- text-align:center;
- display:block;
- color:yellow;
- font-weight:bold;
- font-size:14px;
- width:0%;
+#progress span {
+	background: green;
+	height: 4px;
+	text-align: center;
+	display: block;
+	color: yellow;
+	font-weight: bold;
+	font-size: 14px;
+	width: 0%;
 }
+
+
+/*自定义音量控件样式开始*/  
+input[type=range] {  
+  -webkit-appearance: none;/*清除系统默认样式*/  
+  width: 10%;  
+  background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;/*设置左边颜色为#61bd12，右边颜色为#ddd*/  
+  /* background-size: 90% 100%; */ /*设置左右宽度比例*/  
+  margin-top: 9px;
+  height: 4px;/*横条的高度*/  
+}  
+/*拖动块的样式*/  
+input[type=range]::-webkit-slider-thumb {  
+  -webkit-appearance: none;/*清除系统默认样式*/  
+  height: 26px;/*拖动块高度*/  
+  width: 26px;/*拖动块宽度*/  
+  background: #fff;/*拖动块背景*/  
+  border-radius: 50%; /*外观设置为圆形*/  
+  border: solid 1px #ddd; /*设置边框*/  
+}
+input[type=range] {
+	cursor: pointer;
+}
+/*自定义音量控件样式结束*/ 
+
 
